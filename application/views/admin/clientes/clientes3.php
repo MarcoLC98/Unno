@@ -56,27 +56,9 @@
               <?php endforeach; ?>
             </div>
             
-            <!--
-              <button class="btnDelete deleteClienteBtn" style="padding: 0px;"
-                    type="button" value="<?php echo $cliente->id_cliente; ?>+<?php echo $cliente->nombre_cliente; ?>"><i class='fa fa-trash' style="text-align: center;"></i></button>
+            <?php echo $cliente->id_cliente; ?>+<?php echo $cliente->nombre_cliente; ?>"><i class='fa fa-trash' style="text-align: center;"></i></button>
 
-				<div class="row mb ml">
 				
-                  <div class="content-panel">
-                        <div class="adv-table">
-                            <table cellpadding="0" cellspacing="0" border="0" class="display table table-bordered" id="hidden-table-info">
-                                <thead>
-                                <tr>
-                                    <th style="color: #FB005F !important;">Nombre</th>
-                                    <th style="color: #FB005F !important;">Teléfono</th>
-                                    <th style="color: #FB005F !important;">Ciudad</th>
-                                    <th style="color: #FB005F !important;">Dirección</th>
-                                    <th style="color: #FB005F !important;">Condición</th>
-                                    <th style="color: #FB005F !important;">Cuit</th>
-                                    <th style="color: #FB005F !important;">Acciones</th>
-                                </tr>
-                                </thead>
-                                <tbody>
                                 <?php foreach($clientes as $cliente): ?>
                                     <tr>
                                       <td style="color: black !important;"><?php echo $cliente->nombre_cliente; ?></td>
@@ -104,12 +86,8 @@
               </div>
 
 		</section><! --/wrapper -->
-      </section><!-- /MAIN CONTENT -->
-
-
-      
-
-
+      </section>
+      <!-- /MAIN CONTENT -->
 
 <!--EDIT CLIENTE-->
 <div class="modal fade" id="modal-lg-edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -195,7 +173,6 @@
 var base_url = '<?php echo base_url(); ?>';
 
   /* AÑADIR CLIENTE */
-
   $('.addClienteBtn ').on('click', function() {
     alert("HEY!")
   })
@@ -242,7 +219,6 @@ $('#btnRosa').on('click', function(){
   /* AÑADIR CLIENTE */
 
   /* EDITAR CLIENTE */
-
   $('.editClienteBtn').on("click", function() {
     let idCliente = $(this).val();
 
